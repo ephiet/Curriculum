@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background: #fefae0
+}
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+}
+header{
+    width: 100%;
+    padding: 2em;
+    background: #606c38;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+header img{
+    width: 150px;
+    margin: 15px;
+    align-self: flex-end;
+}
+.nombre {
+    font-style: oblique;
+    font-size: 36px;
+    color: wheat;
+    font-weight: bold;
+    vertical-align: top;
+    align-self: flex-end;
+}
+/* No pude alinear el texto al lado de la fotografía?? */
+.nav {
+    width: 40%;
+    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+.nav a {
+    background: #dda15e;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    font-variant: small-caps;
+    flex-grow: 1;
+}
+.nav :hover{
+    background: #606c38;
+    color: wheat;
+}
+.content {
+    padding: 1em;
+
+    flex:1;
+    /* flex: 1 1 75%; */
+}
+
+.content article{
+    margin: 1em;
+    padding: 1em;
+    line-height: 125%;
+    background-color: wheat;
+    }
+
+.titulo {
+    color: #bc6c25;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
+.contenedor article p{
+    color: #283618;
+}
+.content article h4 {
+    font-variant: small-caps;
+    color: #bc6c25;
+}
+.contenedor aside{
+    align-items: center;
+     
+    /* flex:1 1 25%; */
+    flex:0 0 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+article a {
+    text-decoration: none;    
+}
+.perfil {
+    background: wheat;
+    padding: 1em;
+    margin: 1em;
+}
+.perfil p{
+    color: #283618;
+    font-size: 0.9em;
+}
+   
+.contenedor aside img{
+    height: 11em;
+    border-radius: 5%;
+    vertical-align: top;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+footer{
+    background:#606c38;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .links{
+    background:#dda15e;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer a{
+    flex-grow: 1;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-variant: small-caps;
+    }
+
+footer .links :hover{
+        background: #606c38;
+        color: wheat;
+    }
+    
+footer .volver{
+    background:#dda15e;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .volver :hover{
+    background: #606c38;
+    color: wheat;
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+    .nombre {
+        margin: 20px;
+        text-align: center;
+    }
+    .nav {
+        width: 100%;
+
+    }
+    aside {
+        flex-direction: row;
+        flex:0;
+    }
+    aside .perfil{
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .nombre{
+    text-align: center;
+    }
+    aside {
+        flex-direction: column;
+    }
+    footer{
+        justify-content: space-around;
+    }
+}
+
